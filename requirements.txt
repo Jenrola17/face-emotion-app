@@ -1,1 +1,8 @@
+Flask
 gunicorn
+opencv-python-headless
+tensorflow==2.12.0
+deepface==0.0.79
+numpy
+Pillow
+werkzeug
