@@ -53,9 +53,12 @@ def analyze():
     except Exception as e:
         return jsonify({'error': 'analysis_failed', 'message': str(e)}), 500
 
+<<<<<<< HEAD
 if __name__ == "__main__":
     app.run()
 
+=======
+>>>>>>> d44ef9288c21e758270e3ac4f20224efc22b3271
 
 if __name__ == "__main__":
     app.run(debug=True)

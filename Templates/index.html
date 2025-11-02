@@ -14,6 +14,7 @@
 
 <body class="bg-dark text-light">
 
+<<<<<<< HEAD
 <main class="app-container">
 
     <!-- ✅ Left Panel -->
@@ -64,6 +65,71 @@
 </footer>
 
 
+=======
+<main class="container app-container my-4">
+
+    <div class="card neon-card">
+        <div class="card-body">
+            <div class="row g-4">
+
+                <!-- Left Column: Upload & Camera -->
+                <div class="col-lg-6">
+
+                    <!-- Upload Section -->
+                    <h5 class="section-title">Upload Image</h5>
+                    <form id="uploadForm" enctype="multipart/form-data" class="mb-3">
+                        <input class="form-control form-control-lg" type="file" name="image" accept="image/*" required>
+                        <button class="btn btn-neon w-100 mt-3" type="submit">Analyze Upload</button>
+                    </form>
+
+                    <hr class="divider">
+
+         <!-- Camera Section -->
+<h5 class="section-title">Capture from Camera</h5>
+<div class="camera-wrap">
+    <!-- Video display -->
+    <video id="camera" autoplay playsinline class="border rounded w-100 mb-2"></video>
+
+    <!-- Camera controls -->
+    <div class="cam-controls d-flex gap-2">
+        <!-- Capture & Analyze button (disabled until camera is on) -->
+        <button id="snap" class="btn btn-success flex-grow-1" disabled>
+            Capture & Analyze
+        </button>
+
+        <!-- Toggle Camera button (always visible) -->
+        <button id="toggleCam" class="btn btn-outline-dark flex-grow-1">
+            Turn Camera On
+        </button>
+    </div>
+</div>
+
+                </div>
+
+                <!-- Right Column: Results -->
+                <div class="col-lg-6">
+                    <h5 class="section-title">Result</h5>
+                    <div id="resultCard" class="result-box p-3 bg-light text-dark rounded">
+                        <p id="status" class="muted">No analysis yet.</p>
+                        <div id="emotionBadge" class="mt-2"></div>
+                        <div id="emotionBreakdown" class="mt-3"></div>
+                        <div id="previewWrap" class="mt-3">
+                            <img id="previewImage" src="" alt="preview" style="display:none;" class="img-fluid rounded"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-4 text-muted small text-center">
+        Built with Flask • DeepFace • OpenCV
+    </footer>
+
+</main>
+
+>>>>>>> d44ef9288c21e758270e3ac4f20224efc22b3271
 <!-- Main JS -->
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
