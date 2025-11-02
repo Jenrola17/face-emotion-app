@@ -1,0 +1,174 @@
+/* Midnight Tech Interface - Fully New Layout + Colors */
+
+:root {
+    --bg: #0b1221;
+    --panel: #121c31;
+    --highlight: #00eaff;
+    --danger: #ff3b6b;
+    --success: #4fff7a;
+    --text-bright: #e6f5ff;
+    --text-dim: #7b8ba5;
+    --radius: 6px;
+    --shadow: 0 0 25px rgba(0, 234, 255, 0.15);
+}
+
+/* GENERAL */
+body {
+    background: var(--bg);
+    color: var(--text-bright);
+    margin: 0;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 0.4px;
+}
+
+/* MAIN CONTAINER STRUCTURE */
+.app-container {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 18px;
+    padding: 20px;
+}
+
+/* PANELS */
+.control-panel, .result-panel {
+    background: var(--panel);
+    border: 1px solid rgba(0, 234, 255, 0.18);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow);
+}
+
+/* TITLES */
+.section-title {
+    font-size: 1.05rem;
+    color: var(--highlight);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* VIDEO */
+#camera {
+    width: 100%;
+    height: 220px;
+    border-radius: var(--radius);
+    border: 2px solid var(--highlight);
+    background: #05121e;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+/* BUTTONS */
+button {
+    border: none;
+    padding: 10px 14px;
+    color: var(--text-bright);
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+/* Camera Toggle Button - TOP */
+#toggleCam {
+    width: 100%;
+    background: var(--highlight);
+    color: #00141a;
+    margin-bottom: 10px;
+}
+#toggleCam:hover {
+    background: #03f7ff;
+}
+
+/* Capture Button - BELOW VIDEO */
+#snap {
+    width: 100%;
+    background: #173b6c;
+    border: 2px solid var(--highlight);
+}
+#snap:hover:not(:disabled) {
+    background: var(--highlight);
+    color: #00141a;
+}
+
+/* DISABLED STATE */
+button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* FILE UPLOAD FORM */
+#uploadForm button {
+    background: var(--success);
+    color: #001a0d;
+}
+#uploadForm button:hover {
+    background: #75ff93;
+}
+
+/* STATUS */
+#status {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin: 8px 0;
+}
+
+/* BREAKDOWN */
+#emotionBreakdown div {
+    background: rgba(0, 234, 255, 0.08);
+    border: 1px solid rgba(0, 234, 255, 0.18);
+    padding: 8px;
+    border-radius: var(--radius);
+    margin-top: 6px;
+}
+
+/* EMOJI + TEXT */
+#emotionBadge h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--highlight);
+}
+
+/* PREVIEW IMAGE */
+#previewImage {
+    width: 100%;
+    margin-top: 12px;
+    border-radius: var(--radius);
+    border: 2px solid var(--highlight);
+}
+
+/* SMALL SCREENS */
+@media (max-width: 900px) {
+    .app-container {
+        grid-template-columns: 1fr;
+    }
+    #camera {
+        height: 180px;
+    }
+}
+
+
+form input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+hr.divider {
+    border-color: rgba(0, 234, 255, 0.1);
+    margin: 20px 0;
+}
+
+.result-panel {
+    min-height: 450px;
+}
+
+#emotionBreakdown {
+    display: grid;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+button, input {
+    width: 100%;
+}
